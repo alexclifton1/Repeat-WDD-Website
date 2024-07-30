@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Football Tickets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <h1>Welcome to The Minigame</h1>
+	
+	<nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="form.html">Buy Tickets</a></li>
+            <li><a href="game.html">Play Game</a></li>
+        </ul>
+    </nav>
+	
+    <main>
+	<button onclick= "guessTheNumberGame()"> Start Game</button>
+ <script>
+     function guessTheNumberGame() {
+            // Generate a random number between 1 and 10
+            const secretNumber = Math.floor(Math.random() * 10) + 1;
+            let guessesLeft = 3;
+
+            while (guessesLeft > 0) {
+                // Ask the user to enter a guess
+                const userGuess = parseInt(prompt("Enter a number between 1 and 10:"));
+
+                // Check the user's guess
+                if (userGuess === secretNumber) {
+                    alert("Congratulations, you guessed correctly!");
+                    break;
+                } else if (userGuess > secretNumber) {
+                    alert("You guessed too high, try again!");
+                } else {
+                    alert("You guessed too low, try again!");
+                }
+
+                guessesLeft--;
+
+                if (guessesLeft === 0) {
+                    alert("You have used up all your guesses, better luck next time. The secret number was " + secretNumber);
+                } else {
+                    alert("You have " + guessesLeft + " guesses left.");
+                }
+            }
+
+            // Ask the user if they want to play again
+            const playAgain = prompt("Would you like to have another go? (y/n)").toLowerCase();
+
+            if (playAgain === 'y') {
+                guessTheNumberGame();
+            } else {
+                alert("Game Over");
+            }
+        }
+
+        document.getElementById('startGameButton').addEventListener('click', guessTheNumberGame);
+		
+</script>
+</body>
+</html>
+
+
+

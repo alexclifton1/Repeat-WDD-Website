@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Football Tickets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	 <style>
+	 form {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            height: 100vh;
+        }
+
+        .image-container {
+            position: relative;
+            width: 49%;
+            height: 49vh;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            text-align: center;
+        }
+	</style>
+</head>
+<body>
+
+     <h1>The Gallery</h1>
+	
+	<nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="form.html">Buy Tickets</a></li>
+            <li><a href="game.html">Play Game</a></li>
+        </ul>
+    </nav>
+	
+    <main>
+		<form id="informationGallery">
+        <div class="image-container">
+        <img src="fans.jpg" alt="Fans">
+		</div>
+		
+		<div class="image-container">
+        <img src="stadium.jpg" alt="Stadium">
+		</div>
+		
+		<div class="image-container">
+        <img src="que.jpg" alt="Que">
+		</div>
+		
+		<div class="image-container">
+        <img src="ticketscanner.jpg" alt="Ticket Scanner">
+		</div>
+		</form>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+

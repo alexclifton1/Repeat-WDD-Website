@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Football Tickets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+	 <style>
+        form {
+            margin-left: 20px;
+			margin-right:20px;
+            padding: 25px;
+            border: 2px solid #000000;
+            max-width: 425px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #00b300;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #66b3ff;
+        }
+    </style>
+</head>
+<body>
+
+     <h1>Buy your Tickets Here!</h1>
+	
+	<nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="form.html">Buy Tickets</a></li>
+            <li><a href="game.html">Play Game</a></li>
+        </ul>
+    </nav>
+	
+    <main>
+        <form id="informationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+		
+		 <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+
+        <label for="team">Team:</label>
+        <textarea id="team" name="team" rows="2" required></textarea>
+		
+		<label for="quantity">Quantity:</label>
+        <textarea id="quantity" name="quantity" rows="4" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+	</main>
+    <script>
+		// JavaScript for form validation
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+			var age = document.getElementById('age').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+
+            if (!name || !email || !age || !subject || !message) {
+                alert('All sections must be filled out');
+                event.preventDefault();
+            }
+        });
+	</script>
+</body>
+</html>
